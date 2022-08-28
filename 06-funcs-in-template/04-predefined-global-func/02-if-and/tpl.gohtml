@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello World! 01</title>
+</head>
+<body>
+
+EXAMPLE #1
+{{range .}}
+    {{.}}
+{{end}}
+
+EXAMPLE #2
+{{if .}}
+    EXAMPLE #2 {{.}}
+{{end}}
+
+EXAMPLE #3
+{{range .}}
+    {{if .Name}}
+        EXAMPLE #3 - {{.Name}}
+    {{end}}
+{{end}}
+
+EXAMPLE #4
+{{range .}}
+    {{if .Singer}}
+        EXAMPLE #4 - {{.Name}} {{.Singer}}
+    {{end}}
+{{end}}
+
+EXAMPLE #5
+{{range .}}
+    {{if and .Name .Singer}}
+        EXAMPLE #5 Name: {{.Name}}
+        EXAMPLE #5 Singer: {{.Singer}}
+    {{end}}
+{{end}}
+
+</body>
+</html>
