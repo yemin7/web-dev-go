@@ -13,7 +13,12 @@ func main() {
 	if err != nil {
 		log.Fatalln(err)
 	}
-	defer listen.Close()
+	defer func(listen net.Listener) {
+		err := listen.Close()
+		if err != nil {
+
+		}
+	}(listen)
 
 	for {
 		conn, err := listen.Accept()
